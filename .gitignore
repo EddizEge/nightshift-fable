@@ -1,0 +1,20 @@
+node_modules/
+dist/
+assets-src/
+.vite/
+*.log
+test-results/
+playwright-report/
+.DS_Store
+Thumbs.db
+Backups/
+__pycache__/
+screenshots/*-tmp*.png
+tools/tmp/
+
+# Work-in-progress screenshots stay on disk only; the curated set lives in screenshots/final/.
+screenshots/*
+!screenshots/final/
+
+# Raw output of the Blender car build (reproducible: tools/car/build_car.py); the packed model is public/assets/models/player_car.glb.
+tools/car/out/

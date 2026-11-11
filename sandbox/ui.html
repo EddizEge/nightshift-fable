@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>NIGHTSHIFT · UI sandbox</title>
+    <link rel="icon" href="data:," />
+    <style>
+      html, body { margin: 0; height: 100%; background: #05070a; overflow: hidden; }
+      /* Stand-in for the WebGL scene: wet night road, sodium lamps, distant tail lights. */
+      #bg {
+        position: fixed; inset: 0;
+        background:
+          radial-gradient(ellipse 9% 5% at 62% 38%, rgba(255,176,80,.55), transparent 70%),
+          radial-gradient(ellipse 5% 3% at 74% 41%, rgba(255,176,80,.45), transparent 70%),
+          radial-gradient(ellipse 3% 2% at 81% 43%, rgba(255,176,80,.4), transparent 70%),
+          radial-gradient(ellipse 1.2% 0.8% at 58% 47%, rgba(255,40,30,.9), transparent 70%),
+          radial-gradient(ellipse 1.2% 0.8% at 60.5% 47%, rgba(255,40,30,.9), transparent 70%),
+          radial-gradient(ellipse 0.8% 0.6% at 68% 46%, rgba(255,50,40,.7), transparent 70%),
+          radial-gradient(ellipse 0.8% 0.6% at 69.5% 46%, rgba(255,50,40,.7), transparent 70%),
+          radial-gradient(ellipse 2% 22% at 59% 70%, rgba(255,60,40,.18), transparent 70%),
+          radial-gradient(ellipse 6% 30% at 62% 75%, rgba(255,170,80,.14), transparent 70%),
+          radial-gradient(ellipse 30% 12% at 64% 85%, rgba(180,200,230,.10), transparent 70%),
+          linear-gradient(180deg, #0a0d13 0%, #0d1118 40%, #12151a 46%, #0b0d10 47%, #07080a 100%);
+      }
+      #bg::after {
+        /* road wedge + lane lines */
+        content: ''; position: absolute; inset: 47% 0 0 0;
+        background:
+          linear-gradient(100deg, transparent 49.6%, rgba(220,220,210,.20) 49.8%, transparent 50.2%),
+          linear-gradient(80deg, transparent 63%, rgba(255,190,90,.12) 63.3%, transparent 63.8%),
+          radial-gradient(ellipse 60% 100% at 62% 0%, rgba(40,46,56,.6), transparent 70%);
+      }
+      #rain {
+        position: fixed; inset: 0; opacity: .25;
+        background: repeating-linear-gradient(100deg, transparent 0 7px, rgba(200,215,235,.08) 7px 8px, transparent 8px 23px);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="bg"></div>
+    <div id="rain"></div>
+    <script type="module" src="/src/sandbox/ui.ts"></script>
+  </body>
+</html>
