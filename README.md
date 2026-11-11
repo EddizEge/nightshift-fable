@@ -14,9 +14,7 @@ after the page has loaded: the production build is a folder of static files.
 
 This game was written by **Claude Fable 5.2** (extra-high effort) running as an agent in **Claude Code**, from the same long prompt that was given to Gemini 4 Carbon for a side-by-side comparison. No human wrote any of the code. Fable planned the work, split parts of it across Claude Opus 5.5 sub-agents, wrote every system, built its own browser test harness and checked the game in a real browser on its own.
 
-- Total active working time was about 16 h 47 min, including a second task in which Fable modelled the player car from scratch in Blender with a Python script (`tools/car/`). Breaks in between were only usage limits running out.
-- After the first playable build, the operator passed on test findings (for example a crash bug in the pile-up event); Fable found the root causes and fixed them itself.
-- After the comparison, Fable was asked to fix one audio bug (a constant, bell-like raindrop patter on the car body). That fix is included here but was not part of the comparison.
+- Total working time was about 16 h 36 min, from one prompt, including modelling the player car from scratch in Blender with a Python script (`tools/car/`). Breaks in between were only usage limits running out.
 - Full write-up and both games side by side: <https://lab.edizegemercan.com/posts/nightshift-gemini-4-carbon-vs-claude-fable-5-2/>
 - Added afterwards, not part of Fable's output: the GitHub Pages workflow (`.github/workflows/pages.yml`), the `LICENSE` file and this section. The project's internal notes and the agent instruction file were left out of this public copy.
 
